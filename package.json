@@ -1,0 +1,49 @@
+{
+  "devDependencies": {
+    "@babel/cli": "7.0.0-beta.46",
+    "@babel/core": "7.0.0-beta.46",
+    "@babel/plugin-proposal-object-rest-spread": "7.0.0-beta.46",
+    "@babel/plugin-transform-runtime": "7.0.0-beta.46",
+    "@babel/preset-env": "7.0.0-beta.46",
+    "@commitlint/cli": "^6.2.0",
+    "@commitlint/config-conventional": "^6.1.3",
+    "@commitlint/config-lerna-scopes": "^6.1.3",
+    "@ebay/browserslist-config": "^1.0.0",
+    "codecov": "^3.0.2",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
+    "lerna": "2.11.0",
+    "lint-staged": "^7.1.0",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.3",
+    "prettier": "^1.12.1"
+  },
+  "lint-staged": {
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint -f visualstudio",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "build": "lerna exec --parallel -- babel src --out-dir ./dist --delete-dir-on-start",
+    "clean": "lerna clean && rm -rf ./packages/*/dist",
+    "commitmsg": "echo $GIT_PARAMS && commitlint -e $GIT_PARAMS",
+    "format": "prettier \"**/*.{json,md,js}\" --write",
+    "lint": "eslint -f visualstudio packages/",
+    "postinstall": "lerna bootstrap --hoist",
+    "precommit": "lint-staged",
+    "publish": "npm run build && lerna publish --independent",
+    "mocha": "mocha packages/*/test/*.test.js",
+    "test": "nyc npm run mocha",
+    "report": "open ./coverage/lcov-report/index.html",
+    "ci:test": "nyc --reporter=text npm run mocha",
+    "ci:codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  }
+}

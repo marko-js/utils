@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["env", {
+      "loose": true,
+      "targets": {
+        "node": "6"
+      }
+    }]
+  ],
+  "plugins": [
+    "transform-runtime",
+    "proposal-object-rest-spread"
+  ]
+}
