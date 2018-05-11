@@ -1,6 +1,6 @@
 {
   "presets": [
-    ["env", {
+    ["@babel/env", {
       "loose": true,
       "targets": {
         "node": "6"
@@ -8,7 +8,7 @@
     }]
   ],
   "plugins": [
-    "transform-runtime",
-    "proposal-object-rest-spread"
+    "@babel/transform-runtime",
+    "@babel/plugin-proposal-object-rest-spread"
   ]
 }
