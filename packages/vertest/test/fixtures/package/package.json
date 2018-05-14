@@ -1,0 +1,10 @@
+{
+    "name": "package-fixture",
+    "private": true,
+    "scripts": {
+        "test": "node test.js"
+    },
+    "peerDependencies": {
+        "has-key-deep": "^1 || ^2"
+    }
+}

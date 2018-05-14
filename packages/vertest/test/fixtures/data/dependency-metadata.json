@@ -1,0 +1,283 @@
+{
+  "dedupe": {
+    "semverRange": "^1",
+    "versions": {
+      "0.1.0": {
+        "name": "dedupe",
+        "version": "0.1.0",
+        "dependencies": {
+          "cloneextend": "*"
+        },
+        "devDependencies": {
+          "mocha": "*",
+          "chai": "*",
+          "sinon": "*"
+        }
+      },
+      "0.2.0": {
+        "name": "dedupe",
+        "version": "0.2.0",
+        "dependencies": {},
+        "devDependencies": {
+          "mocha": "*",
+          "chai": "*"
+        }
+      },
+      "0.2.1": {
+        "name": "dedupe",
+        "version": "0.2.1",
+        "dependencies": {},
+        "devDependencies": {
+          "mocha": "*",
+          "chai": "*"
+        }
+      },
+      "0.2.2": {
+        "name": "dedupe",
+        "version": "0.2.2",
+        "dependencies": {},
+        "devDependencies": {
+          "mocha": "*",
+          "chai": "*"
+        }
+      },
+      "0.2.3": {
+        "name": "dedupe",
+        "version": "0.2.3",
+        "dependencies": {},
+        "devDependencies": {
+          "mocha": "*",
+          "chai": "*"
+        }
+      },
+      "0.2.4": {
+        "name": "dedupe",
+        "version": "0.2.4",
+        "dependencies": {},
+        "devDependencies": {
+          "mocha": "*",
+          "chai": "*"
+        }
+      },
+      "0.2.5": {
+        "name": "dedupe",
+        "version": "0.2.5",
+        "dependencies": {},
+        "devDependencies": {
+          "mocha": "*",
+          "chai": "*"
+        }
+      },
+      "0.2.6": {
+        "name": "dedupe",
+        "version": "0.2.6",
+        "dependencies": {
+          "sigmund": "^1.0.0"
+        },
+        "devDependencies": {
+          "mocha": "*",
+          "chai": "*"
+        }
+      },
+      "0.2.7": {
+        "name": "dedupe",
+        "version": "0.2.7",
+        "dependencies": {
+          "sigmund": "~1.0.0"
+        },
+        "devDependencies": {
+          "mocha": "*",
+          "chai": "*"
+        }
+      },
+      "0.2.8": {
+        "name": "dedupe",
+        "version": "0.2.8",
+        "dependencies": {
+          "sigmund": "^1.0.0"
+        },
+        "devDependencies": {
+          "mocha": "^1.19.0",
+          "chai": "^1.9.1"
+        }
+      },
+      "1.0.0": {
+        "name": "dedupe",
+        "version": "1.0.0",
+        "dependencies": {
+          "sigmund": "^1.0.0"
+        },
+        "devDependencies": {
+          "chai": "^1.9.1",
+          "mocha": "^1.21.4"
+        }
+      },
+      "1.0.1": {
+        "name": "dedupe",
+        "version": "1.0.1",
+        "dependencies": {
+          "sigmund": "^1.0.0"
+        },
+        "devDependencies": {
+          "chai": "^1.9.1",
+          "mocha": "^1.21.4"
+        }
+      },
+      "1.0.2": {
+        "name": "dedupe",
+        "version": "1.0.2",
+        "dependencies": {
+          "sigmund": "^1.0.0"
+        },
+        "devDependencies": {
+          "chai": "^1.9.1",
+          "mocha": "^1.21.4"
+        }
+      },
+      "2.0.0": {
+        "name": "dedupe",
+        "version": "2.0.0",
+        "dependencies": {
+          "sigmund": "1.0.1"
+        },
+        "devDependencies": {
+          "chai": "3.5.0",
+          "mocha": "2.3.3"
+        },
+        "engines": {
+          "node": ">=4.0"
+        }
+      },
+      "2.0.1": {
+        "name": "dedupe",
+        "version": "2.0.1",
+        "dependencies": {
+          "sigmund": "1.0.1"
+        },
+        "devDependencies": {
+          "chai": "3.5.0",
+          "mocha": "2.3.3"
+        },
+        "engines": {
+          "node": ">=4.0"
+        }
+      },
+      "2.0.2": {
+        "name": "dedupe",
+        "version": "2.0.2",
+        "dependencies": {
+          "sigmund": "1.0.1"
+        },
+        "devDependencies": {
+          "chai": "^3.5",
+          "mocha": "^2.5.3"
+        },
+        "engines": {
+          "node": ">=4.0"
+        }
+      },
+      "2.0.3": {
+        "name": "dedupe",
+        "version": "2.0.3",
+        "dependencies": {
+          "sigmund": "1.0.1"
+        },
+        "devDependencies": {
+          "chai": "^3.5",
+          "mocha": "^2.5.3"
+        },
+        "engines": {
+          "node": ">=4.0"
+        }
+      },
+      "2.1.0": {
+        "name": "dedupe",
+        "version": "2.1.0",
+        "dependencies": {
+          "sigmund": "1.0.1"
+        },
+        "devDependencies": {
+          "chai": "^3.5",
+          "mocha": "^3.0.0"
+        },
+        "engines": {
+          "node": ">=4.0"
+        }
+      }
+    }
+  },
+  "decamelize": {
+    "semverRange": "^2",
+    "versions": {
+      "1.0.0": {
+        "name": "decamelize",
+        "version": "1.0.0",
+        "devDependencies": {
+          "ava": "0.0.4"
+        },
+        "engines": {
+          "node": ">=0.10.0"
+        }
+      },
+      "1.1.0": {
+        "name": "decamelize",
+        "version": "1.1.0",
+        "devDependencies": {
+          "ava": "0.0.4"
+        },
+        "engines": {
+          "node": ">=0.10.0"
+        }
+      },
+      "1.1.1": {
+        "name": "decamelize",
+        "version": "1.1.1",
+        "devDependencies": {
+          "ava": "0.0.4"
+        },
+        "engines": {
+          "node": ">=0.10.0"
+        }
+      },
+      "1.1.2": {
+        "name": "decamelize",
+        "version": "1.1.2",
+        "dependencies": {
+          "escape-string-regexp": "^1.0.4"
+        },
+        "devDependencies": {
+          "ava": "*",
+          "xo": "*"
+        },
+        "engines": {
+          "node": ">=0.10.0"
+        }
+      },
+      "1.2.0": {
+        "name": "decamelize",
+        "version": "1.2.0",
+        "devDependencies": {
+          "ava": "*",
+          "xo": "*"
+        },
+        "engines": {
+          "node": ">=0.10.0"
+        }
+      },
+      "2.0.0": {
+        "name": "decamelize",
+        "version": "2.0.0",
+        "dependencies": {
+          "xregexp": "4.0.0"
+        },
+        "devDependencies": {
+          "ava": "*",
+          "xo": "*"
+        },
+        "engines": {
+          "node": ">=4"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "vertest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Michael Rawlings <mirawlings@ebay.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "7.0.0-beta.44",
+    "chalk": "^2.4.1",
+    "execa": "^0.10.0",
+    "listr": "^0.14.0",
+    "mz": "^2.7.0",
+    "package-json": "^4.0.1",
+    "read-pkg-up": "^3.0.0",
+    "recursive-copy": "^2.0.9",
+    "rimraf-then": "^1.0.1",
+    "semver": "^5.5.0",
+    "temp-dir": "^1.0.0",
+    "yargonaut": "^1.1.2",
+    "yargs": "^11.0.0",
+    "zen-observable": "^0.8.8"
+  },
+  "peerDependencies": {
+    "marko-widgets": "^6 || ^7",
+    "marko": "^3 || ^4",
+    "lasso": "^2 || ^3"
+  }
+}
