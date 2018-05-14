@@ -30,6 +30,8 @@
 
 * [vertest](https://github.com/marko-js/utils/blob/master/packages/vertest/README.md) -
   test a package with the versions of dependencies it claims to support
+* [parse-node-args](https://github.com/marko-js/utils/blob/master/packages/parse-node-args/README.md) -
+  extract all valid node flags from a list of process args
 
 ## Contributing
 

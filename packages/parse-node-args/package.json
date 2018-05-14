@@ -1,0 +1,30 @@
+{
+  "name": "parse-node-args",
+  "description": "Extract node cli options from a list of flags.",
+  "version": "1.0.0",
+  "author": "Dylan Piercey <dpiercey@ebay.com>",
+  "browser": {
+    "./dist/index.js": "./dist/index.js"
+  },
+  "bugs": "https://github.com/marko-js/utils/issues/new?template=Bug_report.md",
+  "dependencies": {
+    "@babel/runtime": "7.0.0-beta.44"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/marko-js/utils/blob/master/packages/parse-node-args/README.md",
+  "keywords": [
+    "args",
+    "cli",
+    "flags",
+    "node",
+    "parse"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marko-js/utils/tree/master/packages/parse-node-args"
+  }
+}
