@@ -20,10 +20,5 @@
     "yargonaut": "^1.1.2",
     "yargs": "^11.0.0",
     "zen-observable": "^0.8.8"
-  },
-  "peerDependencies": {
-    "marko-widgets": "^6 || ^7",
-    "marko": "^3 || ^4",
-    "lasso": "^2 || ^3"
   }
 }
