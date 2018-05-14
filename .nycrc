@@ -2,10 +2,15 @@
     "all": true,
     "cache": true,
     "include": [
-        "packages/**/*.js"
+        "packages/*/src/**/*.js"
     ],
+    "instrument": false,
     "reporter": [
       "lcov",
       "text-summary"
-    ]
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "sourceMap": false
 }

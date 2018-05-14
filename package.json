@@ -10,7 +10,9 @@
     "@commitlint/config-conventional": "^6.1.3",
     "@commitlint/config-lerna-scopes": "^6.1.3",
     "@ebay/browserslist-config": "^1.0.0",
+    "babel-plugin-istanbul": "^4.1.6",
     "codecov": "^3.0.2",
+    "cross-env": "^5.1.5",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
@@ -42,9 +44,9 @@
     "precommit": "lint-staged",
     "publish": "npm run build && lerna publish --independent",
     "mocha": "mocha -r @babel/register packages/*/test/*.test.js",
-    "test": "nyc npm run mocha",
+    "test": "cross-env NODE_ENV=test nyc npm run mocha",
     "report": "open ./coverage/lcov-report/index.html",
-    "ci:test": "nyc --reporter=text npm run mocha",
+    "ci:test": "cross-env NODE_ENV=test nyc --reporter=text npm run mocha",
     "ci:codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   }
 }

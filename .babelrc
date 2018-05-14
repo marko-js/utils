@@ -10,5 +10,10 @@
   "plugins": [
     "@babel/transform-runtime",
     "@babel/plugin-proposal-object-rest-spread"
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": ["babel-plugin-istanbul"]
+    }
+  }
 }
