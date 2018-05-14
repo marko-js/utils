@@ -17,12 +17,12 @@
     <img src="https://img.shields.io/github/license/marko-js/utils.svg" alt="MIT"/>
   </a>
   <!-- CI -->
-  <a href="https://travis-ci.org/marko-js/utils">
-    <img src="https://img.shields.io/travis/marko-js/utils.svg" alt="Build status"/>
+  <a href="https://travis-ci.com/marko-js/utils">
+    <img src="https://travis-ci.com/marko-js/utils.svg?branch=master" alt="Build status"/>
   </a>
   <!-- Coverage -->
-  <a href="https://coveralls.io/github/marko-js/utils">
-    <img src="https://img.shields.io/coveralls/marko-js/utils.svg" alt="Test Coverage"/>
+  <a href="https://codecov.io/gh/marko-js/utils">
+    <img src="https://codecov.io/gh/marko-js/utils/branch/master/graph/badge.svg" />
   </a>
   <!-- It's a joke -->
   <a href="https://twitter.com/mlrawlings/status/974823927917641728">
