@@ -1,10 +1,10 @@
 {
   "name": "vertest",
+  "description": "Test a package with the versions of dependencies it claims to support.",
   "version": "1.0.1",
-  "description": "",
-  "bin": "./dist/cli.js",
   "author": "Michael Rawlings <mirawlings@ebay.com>",
-  "license": "MIT",
+  "bin": "./dist/cli.js",
+  "bugs": "https://github.com/marko-js/utils/issues/new?template=Bug_report.md",
   "dependencies": {
     "@babel/runtime": "7.0.0-beta.44",
     "chalk": "^2.4.1",
@@ -20,5 +20,21 @@
     "yargonaut": "^1.1.2",
     "yargs": "^11.0.0",
     "zen-observable": "^0.8.8"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/marko-js/utils/blob/master/packages/vertest/README.md",
+  "keywords": [
+    "dependencies",
+    "peerDependencies",
+    "semver",
+    "test",
+    "versions"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marko-js/utils/tree/master/packages/vertest"
   }
 }
