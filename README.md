@@ -1,10 +1,6 @@
-<h1 align="center">
-  <!-- Logo -->
-  🔨 Utils 🔧
-  <br/>
-
+<h1 align="center">🔨 Utils 🔧</h1>
+<p align="center">
   <!-- Structure -->
-
   <a href="https://github.com/lerna/lerna">
     <img src="https://img.shields.io/badge/monorepo-lerna-531099.svg" alt="Lerna"/>
   </a>
@@ -28,7 +24,12 @@
   <a href="https://twitter.com/mlrawlings/status/974823927917641728">
     <img src="https://img.shields.io/badge/🐛-Bug Free-green.svg" alt="It's a joke"/>
   </a>
-</h1>
+</p>
+
+## Packages
+
+* [vertest](https://github.com/marko-js/utils/blob/master/packages/vertest/README.md) -
+  test a package with the versions of dependencies it claims to support
 
 ## Contributing
 
