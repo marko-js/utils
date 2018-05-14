@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { style } from "yargonaut";
 import { version } from "yargs";
 import { resolve } from "path";
