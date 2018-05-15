@@ -175,10 +175,18 @@ export const buildMinimalPackageMatrix = dependencies => {
         if (dep === otherDep) {
           set.push(version);
         } else {
-          const validDependencies = otherDep.filter(dep => {
-            const peers = dep.peerDependencies;
-            const required = peers && peers[version.name];
-            return !required || semver.satisfies(version.version, required);
+          const peers = version.peerDependencies;
+          const validDependencies = otherDep.filter(other => {
+            const otherPeers = other.peerDependencies;
+            const otherRequirement = otherPeers && otherPeers[version.name];
+            const otherSatified =
+              !otherRequirement ||
+              semver.satisfies(version.version, otherRequirement);
+            const currentRequirement = peers && peers[other.name];
+            const currentSatisfied =
+              !currentRequirement ||
+              semver.satisfies(other.version, currentRequirement);
+            return otherSatified && currentSatisfied;
           });
           const latestMatch = validDependencies[validDependencies.length - 1];
           set.push(latestMatch ? latestMatch : otherDep[otherDep.length - 1]);
