@@ -49,7 +49,7 @@ export const renderSkip = set => {
   let message = `${bgCyan(" SKIP ")} ${renderVersions(set.packages)}`;
   if (set.engineMismatch) {
     for (let pkg in set.engineMismatch) {
-      message += "\n      ";
+      message += "\n       ";
       message += dim(
         `${pkg}@${set.packages[pkg].version} requires node at ${
           set.engineMismatch[pkg]
@@ -60,7 +60,7 @@ export const renderSkip = set => {
   if (set.peerMismatch) {
     for (let pkg in set.peerMismatch) {
       for (let peer in set.peerMismatch[pkg]) {
-        message += "\n      ";
+        message += "\n       ";
         message += dim(
           `${pkg}@${set.packages[pkg].version} requires ${peer} at ${
             set.peerMismatch[pkg][peer]
@@ -90,6 +90,6 @@ export const renderSummary = sets => {
 
 export const renderVersions = packages => {
   return Object.values(packages)
-    .map(pkg => `${pkg.name}${blue("@")}${blue(pkg.version)}`)
+    .map(pkg => `${pkg.name}${blue("@" + pkg.version)}`)
     .join(" ");
 };
