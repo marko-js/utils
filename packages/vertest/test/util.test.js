@@ -16,7 +16,7 @@ import {
 import dependencyMetadata from "./fixtures/data/dependency-metadata.json";
 import { expect } from "chai";
 
-describe("utils", () => {
+describe("vertest/util", () => {
   describe("getDependencyVersions", () => {
     const dedupe = dependencyMetadata.dedupe.versions["1.0.0"];
     const decamelize = dependencyMetadata.decamelize.versions["1.0.0"];
@@ -63,8 +63,28 @@ describe("utils", () => {
     });
   });
   describe("getPackageSets", () => {
-    it("should work", () => {
-      getPackageSets(dependencyMetadata, {});
+    it("should build a full matrix", () => {
+      const sets = getPackageSets(dependencyMetadata, {
+        mode: MODE_LATEST_MINORS
+      });
+      expect(sets.length).to.eql(6);
+      expect(sets.fullMatrixSize).to.eql(6);
+      expect(sets.minimalMatrixSize).to.eql(undefined);
+      expect(sets[0].packages.dedupe.version).to.eql("2.0.3");
+      expect(sets[0].packages.decamelize.version).to.eql("1.0.0");
+      // see buildFullMatrix for full assertions on the matrix output
+    });
+    it("should fallback to a minimal matrix when threshold reached", () => {
+      const sets = getPackageSets(dependencyMetadata, {
+        mode: MODE_ALL,
+        threshold: 10
+      });
+      expect(sets.length).to.eql(9);
+      expect(sets.fullMatrixSize).to.eql(25);
+      expect(sets.minimalMatrixSize).to.eql(9);
+      expect(sets[0].packages.dedupe.version).to.eql("2.0.0");
+      expect(sets[0].packages.decamelize.version).to.eql("1.2.0");
+      // see buildMinimalMatrix for full assertions on the matrix output
     });
   });
   describe("filterVersions", () => {
@@ -170,6 +190,25 @@ describe("utils", () => {
       expect(matrix.length).to.eql(3);
       expect(matrix).eql([
         [dedupe["1.0.0"], decamelize["2.0.0"]],
+        [dedupe["2.0.0"], decamelize["2.0.0"]],
+        [dedupe["2.0.0"], decamelize["1.0.0"]]
+      ]);
+    });
+
+    it("should take peerDependencies into account", () => {
+      const dedupeLegacy = {
+        ...dedupe["1.0.0"],
+        peerDependencies: {
+          decamelize: "^1"
+        }
+      };
+      const matrix = buildMinimalPackageMatrix([
+        [dedupeLegacy, dedupe["2.0.0"]],
+        [decamelize["1.0.0"], decamelize["2.0.0"]]
+      ]);
+      expect(matrix.length).to.eql(3);
+      expect(matrix).eql([
+        [dedupeLegacy, decamelize["1.0.0"]],
         [dedupe["2.0.0"], decamelize["2.0.0"]],
         [dedupe["2.0.0"], decamelize["1.0.0"]]
       ]);

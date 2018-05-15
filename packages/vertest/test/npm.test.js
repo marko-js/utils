@@ -1,7 +1,7 @@
 import { getDependencyMetadata } from "../src/npm";
 import { expect } from "chai";
 
-describe("npm", function() {
+describe("vertest/npm", function() {
   this.timeout(20000);
   describe("getDependencyMetadata", () => {
     it("query npm registry", async () => {

@@ -7,20 +7,14 @@ const CLI_PATH = relative("../src/cli.js");
 const FIXTURE_PATH = relative("./fixtures/package");
 const CMD = `babel-node ${CLI_PATH} --cwd=${FIXTURE_PATH}`;
 
-describe("cli", function() {
-  this.timeout(20000);
+describe("vertest/cli", function() {
+  this.timeout(40000);
   it("the fixture should pass with latest only", () => {
-    try {
-      execSync(`${CMD} --versions=latest`);
-    } catch (e) {
-      console.log(Object.keys(e));
-      console.log(e);
-      throw e;
-    }
+    execSync(`${CMD} --versions=latest --epilogue=silent`);
   });
-  it("the fixture should fail with latest-majors", () => {
-    expect(() => execSync(`${CMD} --versions=latest-majors`)).to.throw(
-      "Command failed"
-    );
+  it("the fixture should fail with all (only latest passes)", () => {
+    expect(() =>
+      execSync(`${CMD} --versions=all --threshold=4 --concurrency=2`)
+    ).to.throw("Command failed");
   });
 });

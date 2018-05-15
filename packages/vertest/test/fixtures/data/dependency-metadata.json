@@ -1,6 +1,6 @@
 {
   "dedupe": {
-    "semverRange": "^1",
+    "semverRange": "^2",
     "versions": {
       "0.1.0": {
         "name": "dedupe",
@@ -207,7 +207,7 @@
     }
   },
   "decamelize": {
-    "semverRange": "^2",
+    "semverRange": "^1",
     "versions": {
       "1.0.0": {
         "name": "decamelize",
