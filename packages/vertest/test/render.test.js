@@ -114,10 +114,9 @@ ${bgBlack(" DONE ")} ${green(`1 passing`)}${red(` 1 failing`)}${cyan(
         output: "Hello World"
       });
       expect(output).to.eql(
-        `
-${bgGreen(" PASS ")} marko${blue("@4.0.0")} lasso${blue("@3.0.0")}
+        `${bgGreen(" PASS ")} marko${blue("@4.0.0")} lasso${blue("@3.0.0")}
 
-Hello World`.trim()
+Hello World`
       );
     });
   });
@@ -137,10 +136,9 @@ Hello World`.trim()
         output: "Hello World"
       });
       expect(output).to.eql(
-        `
-${bgRed(" FAIL ")} marko${blue("@4.0.0")} lasso${blue("@3.0.0")}
+        `${bgRed(" FAIL ")} marko${blue("@4.0.0")} lasso${blue("@3.0.0")}
 
-Hello World`.trim()
+Hello World`
       );
     });
   });
@@ -162,9 +160,10 @@ Hello World`.trim()
         }
       });
       expect(output).to.eql(
-        `
-${bgCyan(" SKIP ")} marko${blue("@4.0.0")} marko-widgets${blue("@6.0.0")}
-       ${dim("marko@4.0.0 requires node at >= 4")}`.trim()
+        `${bgCyan(" SKIP ")} marko${blue("@4.0.0")} marko-widgets${blue(
+          "@6.0.0"
+        )}
+       ${dim("marko@4.0.0 requires node at >= 4")}`
       );
     });
     it("should show peerMismatches", () => {
@@ -186,9 +185,10 @@ ${bgCyan(" SKIP ")} marko${blue("@4.0.0")} marko-widgets${blue("@6.0.0")}
         }
       });
       expect(output).to.eql(
-        `
-${bgCyan(" SKIP ")} marko${blue("@4.0.0")} marko-widgets${blue("@6.0.0")}
-       ${dim("marko-widgets@6.0.0 requires marko at ^3")}`.trim()
+        `${bgCyan(" SKIP ")} marko${blue("@4.0.0")} marko-widgets${blue(
+          "@6.0.0"
+        )}
+       ${dim("marko-widgets@6.0.0 requires marko at ^3")}`
       );
     });
   });
