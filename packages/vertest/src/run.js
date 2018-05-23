@@ -74,7 +74,11 @@ export default async options => {
             workers.push(worker);
           })
       })),
-      { concurrent: options.concurrency, exitOnError: false }
+      {
+        renderer: options.progress,
+        concurrent: options.concurrency,
+        exitOnError: false
+      }
     ).run();
   } catch (e) {
     testsFailed = true;
