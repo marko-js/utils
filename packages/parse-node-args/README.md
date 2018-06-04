@@ -20,9 +20,9 @@ node ./cli.js --inspect-brk --custom-option
 
 ```javascript
 import { deepEqual } from "assert";
-import pullNodeArgs from "parse-node-args";
+import parseNodeArgs from "parse-node-args";
 
-const { nodeArgs, cliArgs } = pullNodeArgs(process.argv);
+const { nodeArgs, cliArgs } = parseNodeArgs(process.argv);
 
 deepEqual(nodeArgs, ["--inspect-brk"]);
 deepEqual(cliArgs, ["--custom-option"]);
