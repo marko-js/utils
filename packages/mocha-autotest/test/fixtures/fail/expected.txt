@@ -1,0 +1,26 @@
+
+
+  fail/fixtures
+    1) oops
+
+
+
+ UNEXPECTED FAILURES 
+
+  1) fail/fixtures
+       oops
+     
+      SnapshotError: packages/mocha-autotest/test/fixtures/fail/fixtures/oops/actual.html
+      + expected - actual
+
+      -<div>Hello Autotest</div>
+      +<div>Hello World</div>
+      
+      at Context.<anonymous> (packages/mocha-autotest/test/fixtures/fail/autotest.js:5:9)
+
+
+ SUMMARY 
+
+  0 passing
+  1 unexpectedly failing
+

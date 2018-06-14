@@ -1,0 +1,80 @@
+
+
+  pass/fixtures-empty
+    ✓ one
+    ✓ two
+
+  pass/fixtures-skip-fail
+    1) fail
+    - skip
+    - skip-dynamic
+
+  pass/fixtures-empty
+    one
+      ✓ pass1
+      ✓ pass2
+    two
+      ✓ pass1
+      ✓ pass2
+
+  pass/fixtures-snapshot
+    2) fail-mismatch
+    3) fail-missing-expectation
+    ✓ object
+    ✓ string
+
+
+
+ SKIPPED 
+
+  1) pass/fixtures-skip-fail
+       skip
+     This is a reason
+     packages/mocha-autotest/test/fixtures/pass/fixtures-skip-fail/skip/test.js
+
+  2) pass/fixtures-skip-fail
+       skip-dynamic
+     This is a reason
+     packages/mocha-autotest/test/fixtures/pass/fixtures-skip-fail/skip-dynamic/test.js
+
+
+ EXPECTED FAILURES 
+
+  1) pass/fixtures-skip-fail
+       fail
+     Issue #1
+     Error: Oops!
+      at Object.exports.run (packages/mocha-autotest/test/fixtures/pass/fixtures-skip-fail/fail/test.js:3:11)
+      at Context.<anonymous> (packages/mocha-autotest/test/fixtures/pass/autotest.js:12:25)
+
+  2) pass/fixtures-snapshot
+       fail-mismatch
+     The expected purposfully does not match the actual
+     
+      SnapshotError: packages/mocha-autotest/test/fixtures/pass/fixtures-snapshot/fail-mismatch/actual.json
+      + expected - actual
+
+      -{}
+      +[]
+      
+      at Context.<anonymous> (packages/mocha-autotest/test/fixtures/pass/autotest.js:27:9)
+
+  3) pass/fixtures-snapshot
+       fail-missing-expectation
+     The expected.json is purposfully missing
+     
+      SnapshotError: packages/mocha-autotest/test/fixtures/pass/fixtures-snapshot/fail-missing-expectation/actual.json
+      + expected - actual
+
+      -{}
+      +expected.json does not exist
+      
+      at Context.<anonymous> (packages/mocha-autotest/test/fixtures/pass/autotest.js:27:9)
+
+
+ SUMMARY 
+
+  8 passing
+  2 skipped
+  3 failing as expected
+

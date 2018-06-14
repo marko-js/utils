@@ -1,0 +1,12 @@
+{
+  "name": "mocha-autotest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "caller-path": "^2.0.0",
+    "it-fails": "^1.0.4"
+  },
+  "author": "Michael Rawlings <mirawlings@ebay.com>",
+  "license": "MIT"
+}
