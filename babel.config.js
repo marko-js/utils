@@ -1,24 +1,18 @@
 module.exports = {
   presets: [
     [
-      "@babel/env",
+      "@babel/preset-env",
       {
         loose: true,
         targets: {
-          node: 6
+          node: "8"
         }
       }
     ]
   ],
   plugins: [
-    "@babel/transform-runtime",
+    "@babel/plugin-transform-runtime",
     "@babel/plugin-proposal-object-rest-spread"
-  ],
-  overrides: [
-    {
-      test: "packages/abort-group",
-      presets: [["@babel/env", { loose: true }]]
-    }
   ],
   env: {
     test: {

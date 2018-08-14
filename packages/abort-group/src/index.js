@@ -1,17 +1,8 @@
 const START_REG = /request|set/gi;
 
-/**
- * @description
- * Creates a group of async tasks that can be canceled at any time.
- *
- * @example
- * const group = new AbortTracker();
- * group.setTimeout(myFunction, 1000); // run after 1s.
- * group.abort(); // Stop the above timeout.
- */
 class Tracker {
   constructor() {
-    this._fns = [];
+    this._ = [];
   }
 
   /**
@@ -32,7 +23,7 @@ class Tracker {
       typeof val === "function"
         ? val
         : (val.abort || val.cancel || val.unsubscribe).bind(val);
-    this._fns.push(cancel);
+    this._.push(cancel);
     return cancel;
   }
 
@@ -90,7 +81,7 @@ class Tracker {
    * Cancels all existing running async tasks.
    */
   abort() {
-    const fns = this._fns;
+    const fns = this._;
     for (let i = fns.length; i--; ) fns[i]();
     fns.length = 0;
   }
@@ -118,16 +109,19 @@ let create = () => {
 };
 
 /**
- * Creates a new cancelable async tracker.
+ * @description
+ * Creates a group of async tasks that can be canceled at any time.
+ *
+ * @example
+ * const group = abortGroup();
+ * group.setTimeout(myFunction, 1000); // run after 1s.
+ * group.abort(); // Stop the above timeout.
  */
 module.exports = exports = () => create();
 export default exports;
 
 /**
  * Given a name like 'request' or 'set', returns the opposite cancel name ('cancel' or 'clear').
- *
- * @param {"Request"|"request"|"Set"|"set"} name
- * @return {"Cancel"|"cancel"|"Clear"|"clear"}
  */
 function toCancelName([char]) {
   const upper = char.toUpperCase();
