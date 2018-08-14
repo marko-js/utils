@@ -16,13 +16,13 @@ vertest [options] -- [test command]
 
 ```
 Options:
--v, --versions        Versions to include in the test matrix  
+-v, --versions        Versions to include in the test matrix
                       [choices: "latest", "latest-majors", "latest-minors", "min-max", "min-max-majors", "min-max-minors", "all"]
                       [default: "latest-majors"]
--p, --progress        Progress rendering style  
+-p, --progress        Progress rendering style
                       [choices: "silent", "update", "verbose"]
                       [default: "update"]
--e, --epilogue        Epilogue rendering style  
+-e, --epilogue        Epilogue rendering style
                       [choices: "silent", "failures", "verbose"]
                       [default: "failures"]
 -c, --concurrency     Number of tests run at once  [number] [default: cores/2]
@@ -92,9 +92,9 @@ vertest --progress=silent
 
 [Listr](https://github.com/SamVerschueren/listr) is used to render the test progress. The following renderers are available for Listr:
 
-* [silent](https://github.com/SamVerschueren/listr-silent-renderer) - No output
-* [update](https://github.com/SamVerschueren/listr-update-renderer) - Re-rendering progress list with spinners (default)
-* [verbose](https://github.com/SamVerschueren/listr-verbose-renderer) - Sequential logs with timestamps
+- [silent](https://github.com/SamVerschueren/listr-silent-renderer) - No output
+- [update](https://github.com/SamVerschueren/listr-update-renderer) - Re-rendering progress list with spinners (default)
+- [verbose](https://github.com/SamVerschueren/listr-verbose-renderer) - Sequential logs with timestamps
 
 ### Epilogue renderer
 
@@ -102,9 +102,9 @@ vertest --progress=silent
 vertest --epilogue=verbose
 ```
 
-* `silent` - No output
-* `failures` - Test output for failures only (default)
-* `verbose` - Test output for passes/failures and tests skipped due to engine/peer incompatibility
+- `silent` - No output
+- `failures` - Test output for failures only (default)
+- `verbose` - Test output for passes/failures and tests skipped due to engine/peer incompatibility
 
 ### Dependencies
 

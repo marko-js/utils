@@ -28,9 +28,9 @@
 
 ## Packages
 
-* [vertest](https://github.com/marko-js/utils/blob/master/packages/vertest/README.md) -
+- [vertest](https://github.com/marko-js/utils/blob/master/packages/vertest/README.md) -
   test a package with the versions of dependencies it claims to support
-* [parse-node-args](https://github.com/marko-js/utils/blob/master/packages/parse-node-args/README.md) -
+- [parse-node-args](https://github.com/marko-js/utils/blob/master/packages/parse-node-args/README.md) -
   extract all valid node flags from a list of process args
 
 ## Contributing
@@ -39,11 +39,11 @@ This repo provides a consistent build, test, & development environment around sm
 
 ### [npm](https://twitter.com/chriscoyier/status/896051713378992130) scripts
 
-* `test` Run the tests for all packages
-* `publish` Runs build and begins publishing any changed packages
-* `build` Runs babel on the `src` folder for every package _(runs on publish)_
-* `format` Formats the files in the repo _(runs on precommit)_
-* `lint` Lints the files in the repo _(runs on precommit)_
+- `test` Run the tests for all packages
+- `publish` Runs build and begins publishing any changed packages
+- `build` Runs babel on the `src` folder for every package _(runs on publish)_
+- `format` Formats the files in the repo _(runs on precommit)_
+- `lint` Lints the files in the repo _(runs on precommit)_
 
 ## Code of Conduct
 
