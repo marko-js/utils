@@ -1,0 +1,23 @@
+{
+  "name": "abort-group",
+  "description": "Group a set of cancelable actions to be aborted together at any time.",
+  "version": "1.0.0",
+  "author": "Dylan Piercey <dpiercey@ebay.com>",
+  "bugs": "https://github.com/marko-js/utils/issues/new?template=Bug_report.md",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/marko-js/utils/blob/master/packages/abort-group/README.md",
+  "keywords": [
+    "abort",
+    "async",
+    "group",
+    "timeout",
+    "events"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marko-js/utils/tree/master/packages/abort-group"
+  }
+}
