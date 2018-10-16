@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/marko-js/utils/tree/master/packages/vertest/compare/vertest@1.0.2...vertest@1.1.0) (2018-10-16)
+
+
+### Bug Fixes
+
+* upgrade deps ([8abfad1](https://github.com/marko-js/utils/tree/master/packages/vertest/commit/8abfad1))
+
+
+### Features
+
+* **abort-group:** release ([07e7c2b](https://github.com/marko-js/utils/tree/master/packages/vertest/commit/07e7c2b))
+
+
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/marko-js/utils/tree/master/packages/vertest/compare/vertest@1.0.1...vertest@1.0.2) (2018-05-23)
 
