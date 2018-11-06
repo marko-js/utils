@@ -50,7 +50,7 @@
     "format": "prettier \"**/*.{json,md,js}\" --write",
     "lint": "eslint -f visualstudio packages/",
     "postinstall": "lerna bootstrap --hoist --no-ci",
-    "publish": "npm run build && lerna publish --independent",
+    "publish": "npm run build && lerna publish",
     "mocha": "mocha -r @babel/register packages/*/test/*.test.js",
     "test": "cross-env NODE_ENV=test nyc npm run mocha",
     "report": "open ./coverage/lcov-report/index.html",

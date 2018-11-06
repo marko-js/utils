@@ -16,8 +16,10 @@
     "events"
   ],
   "license": "MIT",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/marko-js/utils/tree/master/packages/abort-group"
-  }
+  },
+  "types": "dist/index.d.ts"
 }
