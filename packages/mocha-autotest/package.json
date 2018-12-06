@@ -1,12 +1,14 @@
 {
   "name": "mocha-autotest",
   "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "author": "Michael Rawlings <mirawlings@ebay.com>",
   "dependencies": {
     "caller-path": "^2.0.0",
     "it-fails": "^1.0.4"
   },
-  "author": "Michael Rawlings <mirawlings@ebay.com>",
-  "license": "MIT"
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js"
 }
