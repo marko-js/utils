@@ -3,6 +3,7 @@
 *.DS_Store
 *.marko.js
 *.history/
+.vscode
 *actual.*
 .cache/
 .nyc_output/

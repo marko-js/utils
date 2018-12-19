@@ -34,6 +34,8 @@
   extract all valid node flags from a list of process args
 - [abort-group](https://github.com/marko-js/utils/blob/master/packages/abort-group/README.md) -
   group a set of cancelable actions to be aborted together at any time.
+- [dependent-path-update](https://github.com/marko-js/utils/blob/master/packages/dependent-path-update/README.md) -
+  A tool to update dependent paths when renaming a file.
 
 ## Contributing
 

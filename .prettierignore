@@ -1,10 +1,11 @@
 *.marko.js
-.cache/
-.nyc_output/
+.cache
+.nyc_output
+coverage
 lerna.json
 package.json
 package-lock.json
 CHANGELOG.md
-node_modules/
-coverage/
-dist/
+packages/*/node_modules
+packages/*/dist
+packages/*/test/fixtures
