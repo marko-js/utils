@@ -54,7 +54,7 @@ export default async function({
 
       const validPathsRegexp = new RegExp(
         `(["'])` + // Match a quote
-        `(.+ +)?` + // Followed by any characters + spaces (eg: "require: ./abc" for browser.json files)
+        `(.+?:\\s*)?` + // Followed by any characters + spaces (eg: "require: ./abc" for browser.json files)
         `(?:${validPathsForFile.join("|")})` + // Followed by any valid relative path to the original file.
         `(${originalIsIndex ? "\\/index" : ""}${originalExtReg})?` + // And optional index + extension
           `\\1`, // Followed by the closing matching quote
