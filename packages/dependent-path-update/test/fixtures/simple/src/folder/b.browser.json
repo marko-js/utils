@@ -1,0 +1,6 @@
+{
+  "dependencies": [
+    { "path": "./file" },
+    "require: ./file.js"
+  ]
+}

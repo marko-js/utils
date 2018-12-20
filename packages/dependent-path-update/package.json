@@ -1,0 +1,33 @@
+{
+  "name": "dependent-path-update",
+  "description": "A tool to update dependent paths when renaming a file.",
+  "version": "0.0.0",
+  "author": "Dylan Piercey <dpiercey@ebay.com>",
+  "bugs": "https://github.com/marko-js/utils/issues/new?template=Bug_report.md",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/marko-js/utils/blob/master/packages/dependent-path-update/README.md",
+  "keywords": [
+    "dependent",
+    "path",
+    "update",
+    "rename"
+  ],
+  "dependencies": {
+    "argly": "^1.2.0",
+    "escape-string-regexp": "^1.0.5",
+    "glob": "^7.1.3",
+    "mz": "^2.7.0"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "bin": {
+    "dependent-path-update": "dist/cli.js",
+    "dpu": "dist/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marko-js/utils/tree/master/packages/dependent-path-update"
+  }
+}
