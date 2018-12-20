@@ -14,7 +14,7 @@ describe("dependent-path-update", () => {
           projectDir: dir,
           from,
           to,
-          files: ["*.{js,json}"]
+          include: ["*.{js,json}"]
         });
 
         for (const [file, source] of Object.entries(changedFiles).sort(

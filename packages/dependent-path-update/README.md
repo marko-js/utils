@@ -10,7 +10,24 @@ This uses regexps based on the folder depth to match all possible relative requi
 npm install --save dependent-path-update
 ```
 
-## Usage
+# CLI
+
+## Example
+
+```terminal
+dependent-path-update ./from-file-name.js ./to-file-name.js
+
+# Or a shorthand
+dpu ./from-file-name.js ./to-file-name.js
+```
+
+## Options
+
+- `--include -i`: Pattern of files to match when updating, eg: `"*.json"` for only updating json files.
+- `--exclude -e`: Pattern of files to exclude when updating, eg: `"*.json"` will not update any json files.
+- `--project-dir -d`: The root directory from which all paths must be relative (default to CWD).
+
+# API
 
 ```javascript
 import dependentPathUpdate from "dependent-path-update";
@@ -19,9 +36,13 @@ dependentPathUpdate({
   projectDir: process.cwd(), // The root directory of the project from which all paths should be relative.
   from: "src/file-a.js", // The original file path.
   to: "src/files/a.js", // The new file path.
-  files: [
+  include: [
     // List of glob patterns of files to check.
     "*.{js,json}"
+  ],
+  exclude: [
+    // List of glob patterns of files to ignore.
+    "package.json"
   ]
 }).then(output => {
   // Output contains an object with all of the updated sources.

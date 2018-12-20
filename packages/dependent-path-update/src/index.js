@@ -8,6 +8,7 @@ import getPotentialPaths from "./get-potential-paths";
 const GLOB_DEFAULTS = {
   matchBase: true,
   absolute: true,
+  nodir: true,
   dot: false,
   ignore: ["**/node_modules/"]
 };
@@ -15,7 +16,8 @@ const GLOB_DEFAULTS = {
 export default async function({
   from,
   to,
-  files: patterns,
+  exclude,
+  include = ["."],
   projectDir = process.cwd()
 }) {
   const originalExtReg = `(${escapeRegexp(path.extname(from))})?`;
@@ -26,9 +28,10 @@ export default async function({
   const updatedIsIndex = isIndexFile(updatedPath);
   const changedFiles = {};
 
-  const files = await getFiles(patterns, {
+  const files = await getFiles(include, {
     ...GLOB_DEFAULTS,
-    cwd: projectDir
+    cwd: projectDir,
+    ignore: GLOB_DEFAULTS.ignore.concat(exclude || [])
   });
 
   await Promise.all(
