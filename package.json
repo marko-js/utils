@@ -19,8 +19,8 @@
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.2.0",
-    "lerna": "3.4.3",
-    "lint-staged": "^7.3.0",
+    "lerna": "^2.11.0",
+    "lint-staged": "^8.1.0",
     "mocha": "^5.2.0",
     "mocha-autotest": "^1.0.2",
     "nyc": "^13.1.0",
@@ -40,7 +40,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "echo $GIT_PARAMS && commitlint -e $GIT_PARAMS",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
