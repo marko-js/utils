@@ -1,7 +1,7 @@
 {
   "name": "dependent-path-update",
   "description": "A tool to update dependent paths when renaming a file.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Dylan Piercey <dpiercey@ebay.com>",
   "bugs": "https://github.com/marko-js/utils/issues/new?template=Bug_report.md",
   "files": [
