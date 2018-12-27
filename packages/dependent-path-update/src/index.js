@@ -10,7 +10,7 @@ const GLOB_DEFAULTS = {
   absolute: true,
   nodir: true,
   dot: false,
-  ignore: ["**/node_modules/"]
+  ignore: ["**/node_modules/**"]
 };
 
 export default async function({
