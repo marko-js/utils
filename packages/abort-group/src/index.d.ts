@@ -46,23 +46,23 @@ declare class AbortGroup {
     /**
      * Like the native setTimeout, but can be canceled by this group.
      */
-    setTimeout(handler: any, timeout?: any, ...args: any[]): VoidFunction;
+    setTimeout(...args: Parameters<typeof window.setTimeout>): VoidFunction;
     /**
      * Like the native setInterval, but can be canceled by this group.
      */
-    setInterval(handler: any, interval?: any, ...args: any[]): VoidFunction;
+    setInterval(...args: Parameters<typeof window.setInterval>): VoidFunction;
     /**
      * Like the native setImmediate, but can be canceled by this group.
      */
-    setImmediate(handler: any, ...args: any[]): VoidFunction;
+    setImmediate(...args: Parameters<typeof global.setImmediate>): VoidFunction;
     /**
      * Like the native requestAnimationFrame, but can be canceled by this group.
      */
-    requestAnimationFrame(handler: (time: number) => void): VoidFunction;
+    requestAnimationFrame(...args: Parameters<typeof window.requestAnimationFrame>): VoidFunction;
     /**
      * Like the native requestIdleCallback, but can be canceled by this group.
      */
-    requestIdleCallback(handler: (time: number) => void): VoidFunction;
+    requestIdleCallback(...args: Parameters<typeof window.requestAnimationFrame>): VoidFunction;
     /**
      * Creates a new CancelTracker which is bound to this one.
      * When the parent tracker is aborted, so is the forked tracker.
