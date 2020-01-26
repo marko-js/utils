@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "author": "Michael Rawlings <mirawlings@ebay.com>",
   "dependencies": {
-    "caller-path": "^2.0.0",
+    "callsites": "^3.1.0",
     "it-fails": "^1.0.4"
   },
   "files": [

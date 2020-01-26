@@ -2,14 +2,14 @@ import "it-fails";
 import fs from "fs";
 import path from "path";
 import assert from "assert";
-import callerpath from "caller-path";
+import callsites from "callsites";
 
 const projectRoot = process.cwd();
 const updateExpectations = process.env.hasOwnProperty("UPDATE_EXPECTATIONS");
 const formatters = {};
 
 export default function autotest(fixturesName, run) {
-  const suiteDirectory = path.dirname(callerpath());
+  const suiteDirectory = path.dirname(callsites()[1].getFileName());
   const suiteName = path.basename(suiteDirectory);
   const fixturesDirectory = path.join(suiteDirectory, fixturesName);
 
@@ -30,7 +30,7 @@ export default function autotest(fixturesName, run) {
     fs.readdirSync(fixturesDirectory).forEach(fixtureName => {
       let fixtureDirectory = path.join(fixturesDirectory, fixtureName);
       let context = {};
-      if (fixtureName[0] === "~") {
+      if (fixtureName[0] === "~" || fixtureName[0] === "_") {
         // skip the fixture directory
       } else if (modes.length > 1) {
         describe(fixtureName, function() {
