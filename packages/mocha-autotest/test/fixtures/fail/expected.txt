@@ -16,7 +16,14 @@
       -<div>Hello Autotest</div>
       +<div>Hello World</div>
       
+  '<div>Hello Autotest</div>'
+  
+  should loosely deep-equal
+  
+  '<div>Hello World</div>'
+      at deepEqual (packages/mocha-autotest/src/index.js:96:14)
       at Context.snapshot (packages/mocha-autotest/test/fixtures/fail/autotest.js:5:5)
+      at processImmediate (internal/timers.js:461:21)
 
 
  SUMMARY 
