@@ -7,8 +7,10 @@
     "it-fails": "^1.0.4"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
+  "types": "index.d.ts",
   "license": "MIT",
   "main": "dist/index.js"
 }

@@ -53,13 +53,18 @@ export default function autotest(fixturesName, run) {
 
 function runFixtureTest(name, dir, run, mode, context) {
   const resolve = file => path.join(dir, file);
-  const mainPath = resolve("test.js");
-  const hasMainFile = fs.existsSync(mainPath);
+  let mainPath;
+
+  try {
+    mainPath = require.resolve(resolve("test"));
+    // eslint-disable-next-line no-empty
+  } catch (_) {}
+
+  let main = mainPath && require(mainPath);
   let mochaTestFunction = it;
   let mochaDetails;
 
-  if (hasMainFile) {
-    const main = require(mainPath);
+  if (main) {
     const skip = main.skip || main["skip_" + mode];
     const fails = main.fails || main["fails_" + mode];
     if (skip) {
@@ -128,7 +133,8 @@ function runFixtureTest(name, dir, run, mode, context) {
     dir,
     snapshot,
     mode,
-    context
+    context,
+    main
   });
 }
 
