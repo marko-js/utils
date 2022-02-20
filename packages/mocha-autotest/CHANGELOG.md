@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/marko-js/utils/compare/mocha-autotest@1.1.0...mocha-autotest@1.1.1) (2022-02-20)
+
+
+### Bug Fixes
+
+* **mocha-autotest:** add missing [@babel](https://github.com/babel)/runtime dep ([fac89c1](https://github.com/marko-js/utils/commit/fac89c1))
+
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/marko-js/utils/compare/mocha-autotest@1.0.3...mocha-autotest@1.1.0) (2021-03-01)
 
