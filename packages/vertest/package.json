@@ -1,7 +1,7 @@
 {
   "name": "vertest",
   "description": "Test a package with the versions of dependencies it claims to support.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Michael Rawlings <mirawlings@ebay.com>",
   "bin": "./dist/cli.js",
   "bugs": "https://github.com/marko-js/utils/issues/new?template=Bug_report.md",

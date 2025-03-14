@@ -3,13 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.1.2](https://github.com/marko-js/utils/tree/master/packages/parse-node-args/compare/parse-node-args@1.1.1...parse-node-args@1.1.2) (2018-10-16)
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/marko-js/utils/tree/master/packages/parse-node-args/compare/parse-node-args@1.1.2...parse-node-args@1.1.3) (2025-03-14)
 
 
 ### Bug Fixes
 
-* upgrade deps ([8abfad1](https://github.com/marko-js/utils/tree/master/packages/parse-node-args/commit/8abfad1))
-
+* **parse-node-args:** allow newer babel runtimes ([beb8b35](https://github.com/marko-js/utils/tree/master/packages/parse-node-args/commit/beb8b35))
 
 
 

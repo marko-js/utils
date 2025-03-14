@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/marko-js/utils/compare/mocha-autotest@1.1.2...mocha-autotest@1.1.3) (2025-03-14)
+
+
+### Bug Fixes
+
+* **parse-node-args:** allow newer babel runtimes ([beb8b35](https://github.com/marko-js/utils/commit/beb8b35))
+
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/marko-js/utils/compare/mocha-autotest@1.1.1...mocha-autotest@1.1.2) (2022-02-20)
 

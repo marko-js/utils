@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.1.2"></a>
+## [0.1.2](https://github.com/marko-js/utils/tree/master/packages/dependent-path-update/compare/dependent-path-update@0.1.1...dependent-path-update@0.1.2) (2025-03-14)
+
+
+### Bug Fixes
+
+* **parse-node-args:** allow newer babel runtimes ([beb8b35](https://github.com/marko-js/utils/tree/master/packages/dependent-path-update/commit/beb8b35))
+
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/marko-js/utils/tree/master/packages/dependent-path-update/compare/dependent-path-update@0.1.0...dependent-path-update@0.1.1) (2018-12-27)
 
