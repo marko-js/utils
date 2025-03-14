@@ -1,11 +1,9 @@
 import fs from "fs";
 import assert from "assert";
-import { execSync } from "child_process";
+import cp from "child_process";
 import autotest from "../src";
 
 const mochaBin = require.resolve("mocha/bin/mocha");
-const mochaCmd = `${mochaBin} -r @babel/register`;
-
 describe("mocha-autotest", function() {
   this.timeout(10000);
   autotest("fixtures", ({ test, resolve, snapshot }) => {
@@ -21,9 +19,13 @@ describe("mocha-autotest", function() {
       }
 
       try {
-        output = execSync(`${mochaCmd} ${resolve("autotest.js")}`, {
-          env: Object.assign({ NODE_ENV: "test" }, env)
-        });
+        output = cp.execFileSync(
+          process.execPath,
+          [mochaBin, "-r", "@babel/register", resolve("autotest.js")],
+          {
+            env: Object.assign({ NODE_ENV: "test" }, env)
+          }
+        );
       } catch (e) {
         output = e.stdout;
       }

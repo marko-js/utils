@@ -8,7 +8,7 @@
   },
   "bugs": "https://github.com/marko-js/utils/issues/new?template=Bug_report.md",
   "dependencies": {
-    "@babel/runtime": "7.1.2"
+    "@babel/runtime": "^7.1.2"
   },
   "files": [
     "dist"

@@ -46,7 +46,7 @@
      Error: Oops!
       at Object.exports.run (packages/mocha-autotest/test/fixtures/pass/fixtures-skip-fail/fail/test.js:3:9)
       at Context.run (packages/mocha-autotest/test/fixtures/pass/autotest.js:12:21)
-      at processImmediate (internal/timers.js:461:21)
+      at processImmediate (node:internal/timers:476:21)
 
   2) pass/fixtures-snapshot
        fail-mismatch
@@ -65,7 +65,7 @@
   '[]'
       at deepEqual (packages/mocha-autotest/src/index.js:96:14)
       at Context.snapshot (packages/mocha-autotest/test/fixtures/pass/autotest.js:27:5)
-      at processImmediate (internal/timers.js:461:21)
+      at processImmediate (node:internal/timers:476:21)
 
   3) pass/fixtures-snapshot
        fail-missing-expectation
@@ -84,7 +84,7 @@
   'expected.json does not exist'
       at deepEqual (packages/mocha-autotest/src/index.js:96:14)
       at Context.snapshot (packages/mocha-autotest/test/fixtures/pass/autotest.js:27:5)
-      at processImmediate (internal/timers.js:461:21)
+      at processImmediate (node:internal/timers:476:21)
 
 
  SUMMARY 
